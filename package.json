@@ -1,0 +1,39 @@
+{
+  "name": "SCP_GraphAPI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "next": "next",
+    "dev": "BABEL_DISABLE_CACHE=1 babel-node server.js",
+    "build": "next build && babel server.js --out-file server-compiled.js",
+    "start": "NODE_ENV=production babel-node server-compiled.js"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "cheerio": "^1.0.0-rc.2",
+    "cheerio-httpcli": "^0.7.2",
+    "graphql": "^0.11.7",
+    "graphql-server-koa": "^1.2.0",
+    "graphql-tools": "^2.12.0",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0",
+    "nedb": "^1.8.0",
+    "nedb-promise": "^2.0.1",
+    "next": "^4.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-inline-import": "^2.0.6",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "flow-bin": "^0.61.0",
+    "flow-typed": "^2.2.3"
+  }
+}

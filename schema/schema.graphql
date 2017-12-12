@@ -1,0 +1,26 @@
+type SCP{
+    ID: String! # end of URI
+    name: String! # SCP-XXX
+    title: String! # Index Title
+    #origtitle: String! # Original Index Title
+    #author: String! # Author
+    source: String! # Full URI
+    #origsource: String! # Original Full URI
+}
+
+type Query{
+    SCPs: [SCP] # Query A SCP List
+    SCP(ID:String!):SCP # Query A SCP
+    SCPsWithIDArray(IDs:[String!]!):[SCP] # Query SCPs
+    SCPsWithAuthor(author:String!):[SCP] # Search SCP with Author
+    SCPsWithTitle(title:String!):[SCP] # Search SCP with Title
+}
+
+type Mutation{
+    Update(Token:String!):String
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
